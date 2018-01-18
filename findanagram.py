@@ -5,10 +5,11 @@ def anagramMappings(A, B):
     :rtype: List[int]
     """
     P = []
-    for i in range(len(A)):
-        for j in range(len(B)):
-            if A[i] == B[j]:
-                P.append(j)
+    for i,v in enumerate(A):
+        for k,j in enumerate(B):
+            if v == j:
+                P.append(k)
+                break
     return P
 
-print(anagramMappings([12, 28, 46, 32, 50],[50, 12, 32, 46, 28]))
+print(anagramMappings([40,40],[40,40]))
